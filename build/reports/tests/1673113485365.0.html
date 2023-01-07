@@ -1,0 +1,233 @@
+<html lang="en"><head><style type="text/css" data-tag-name="trix-editor">trix-editor {
+  display: block;
+}
+
+trix-editor:empty:not(:focus)::before {
+  content: attr(placeholder);
+  color: graytext;
+  cursor: text;
+}
+
+trix-editor a[contenteditable=false] {
+  cursor: text;
+}
+
+trix-editor img {
+  max-width: 100%;
+  height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+  resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+  position: absolute;
+  left: -9999px;
+  max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+  content: attr(data-trix-placeholder);
+  color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+  display: inline-block !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+  vertical-align: top !important;
+  margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+  vertical-align: bottom !important;
+  margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="nVRW9a6QTqDtcUxWiS1h8FzyOPEl0zCEJEwZg6Fj">
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project">
+
+    <meta name="description" content="I Made the Best Forum">
+    <meta property="og:description" content="I Made the Best Forum">
+
+    <meta property="og:image" content="http://example.com/social.jpg">
+
+<meta property="og:url" content="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/login">
+<meta property="og:locale" content="en">
+
+
+<title>Laravel</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&amp;display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/css/choices.css">
+<link rel="stylesheet" href="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/css/app.css">
+
+<!-- Scripts -->
+<script src="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/js/app.js" defer=""></script>
+
+
+<!-- Livewire Styles -->
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid] {
+        display: none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" rel="stylesheet">
+<link href="https://unpkg.com/easymde/dist/easymde.min.css" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" rel="stylesheet">
+<link href="https://unpkg.com/trix@1.2.3/dist/trix.css" rel="stylesheet"></head>
+
+<body class="relative overflow-hidden bg-blue-500">
+
+    <div class="absolute z-10 w-full opacity-10">
+        <img src="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/img/bg/bg-header.jpg" alt="" class="object-cover w-full max-h-screen">
+    </div>
+
+
+    
+    <div class="relative z-50 mb-8 font-sans antialiased text-gray-900">
+        <div class="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0">
+
+    <div class="flex items-center justify-center w-full py-4 bg-white sm:max-w-md rounded-t-md">
+        <a href="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181">
+            <img src="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/img/logo/logo.png" class="w-32" alt="">
+        </a>
+    </div>
+
+    <div class="w-full px-6 py-4 overflow-hidden bg-white shadow-md sm:max-w-md rounded-b-md">
+        <form method="POST" action="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/login">
+            <input type="hidden" name="_token" value="nVRW9a6QTqDtcUxWiS1h8FzyOPEl0zCEJEwZg6Fj">
+            <div>
+                <label class="block font-medium text-sm text-gray-700" for="email">
+    Email
+</label>
+                <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block w-full mt-1" id="email" type="email" name="email" required="required" autofocus="autofocus">
+            </div>
+
+            <div class="mt-4">
+                <label class="block font-medium text-sm text-gray-700" for="password">
+    Password
+</label>
+                <input class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm block w-full mt-1" id="password" type="password" name="password" required="required" autocomplete="current-password">
+            </div>
+
+            <div class="block mt-4">
+                <label for="remember_me" class="flex items-center">
+                    <input type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" id="remember_me" name="remember">
+                    <span class="ml-2 text-sm text-gray-600">Remember me</span>
+                </label>
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+                                <a class="text-sm text-gray-600 underline hover:text-gray-900" href="http://ec2-43-206-135-212.ap-northeast-1.compute.amazonaws.com:8181/forgot-password">
+                    Forgot your password?
+                </a>
+                
+                <button type="submit" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition ml-4">
+    Log in
+</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+    </div>
+
+    <!-- Livewire Scripts -->
+
+<script src="/livewire/livewire.js?id=54d078b2ce39327a1702" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'nVRW9a6QTqDtcUxWiS1h8FzyOPEl0zCEJEwZg6Fj';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", function () {
+        window.livewire.start();
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://unpkg.com/trix@1.2.3/dist/trix.js"></script>
+
+
+</body></html>
