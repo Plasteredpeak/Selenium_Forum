@@ -5,7 +5,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -19,8 +18,8 @@ public class MainPageTest {
         Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
+        Configuration.headless = true;
+        Configuration.timeout = 60;
     }
     @Test
     public void login() {
@@ -155,7 +154,7 @@ public class MainPageTest {
         $(By.xpath("/html/body/div[1]/main/section/div[1]/div/div/div[1]/div[2]/div/a")).click();
 
         //check if post is deleted
-        String deleted = $(By.xpath("/html/body/div[1]/main/section/div/span")).getText();
+        String deleted = $(By.xpath("/html/body/div/main/section/div[1]/span")).getText();
         assertEquals("Reply Deleted!", deleted);
 
         webdriver().driver().clearCookies();
