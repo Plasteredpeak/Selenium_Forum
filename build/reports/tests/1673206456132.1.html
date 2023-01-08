@@ -1,0 +1,471 @@
+<html lang="en"><head><style type="text/css" data-tag-name="trix-editor">trix-editor {
+  display: block;
+}
+
+trix-editor:empty:not(:focus)::before {
+  content: attr(placeholder);
+  color: graytext;
+  cursor: text;
+}
+
+trix-editor a[contenteditable=false] {
+  cursor: text;
+}
+
+trix-editor img {
+  max-width: 100%;
+  height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+  resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+  position: absolute;
+  left: -9999px;
+  max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+  content: attr(data-trix-placeholder);
+  color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+  display: inline-block !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+  vertical-align: top !important;
+  margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+  vertical-align: bottom !important;
+  margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="5PwlDIsZWV8c1oeQ6GpKEC98yWDYGveZrHo2AgdV">
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project">
+
+    <meta name="description" content="I Made the Best Forum">
+    <meta property="og:description" content="I Made the Best Forum">
+
+    <meta property="og:image" content="http://example.com/social.jpg">
+
+<meta property="og:url" content="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/create">
+<meta property="og:locale" content="en">
+
+
+<title>Laravel</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&amp;display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/css/choices.css">
+<link rel="stylesheet" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/css/app.css">
+
+<!-- Scripts -->
+<script src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/js/app.js" defer=""></script>
+
+
+<!-- Livewire Styles -->
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" rel="stylesheet">
+<link href="https://unpkg.com/easymde/dist/easymde.min.css" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" rel="stylesheet">
+<link href="https://unpkg.com/trix@1.2.3/dist/trix.css" rel="stylesheet"></head>
+
+<body class="bg-gray-100">
+
+    
+    <header class="relative flex items-center justify-center h-40 bg-blue-500">
+        <img class="absolute z-10 object-cover w-full h-40 opacity-10" src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/img/bg/bg-header.jpg" alt="">
+        <h2 class="z-50 text-4xl font-bold text-gray-200">Welcome to our community</h2>
+    </header>
+
+    
+    <nav x-data="{ open: false }" class="bg-white shadow">
+    <!-- Primary Navigation Menu -->
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 space-x-12">
+            <div class="flex">
+
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com">
+                        <img src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/img/logo/logo.png" class="block w-auto h-12" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            
+            <div class="flex items-center flex-grow">
+
+                <div class="p-2 text-white bg-blue-200 border rounded-l">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+</svg>                </div>
+                <input type="search" name="" id="" class="w-full border-none rounded-r shadow-inner bg-blue-50 focus:ring-blue-200" placeholder="Search Topics">
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+
+                <!-- Settings Dropdown -->
+                                <div class="relative ml-3">
+                    <div class="relative" x-data="{ open: false }" @click.away="open = false" @close.stop="open = false">
+    <div @click="open = ! open">
+        <button class="flex items-center text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
+                                <img class="object-cover w-8 h-8 rounded-full" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+                                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>                            </button>
+    </div>
+
+    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg origin-top-right right-0 " style="display: none;" @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white">
+            <!-- Account Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                Manage Account
+                            </div>
+
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/user/profile">Profile</a>
+                            
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard/notifications">Dashboard</a>
+
+                            
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Authentication -->
+                            <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout">
+                                <input type="hidden" name="_token" value="5PwlDIsZWV8c1oeQ6GpKEC98yWDYGveZrHo2AgdV">
+                                <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout" onclick="event.preventDefault();
+                                                this.closest('form').submit();">Log Out</a>
+                            </form>
+        </div>
+    </div>
+</div>
+                </div>
+                            </div>
+
+            <!-- Hamburger -->
+            <div class="flex items-center -mr-2 sm:hidden">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
+                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard">
+    Dashboard
+</a>
+        </div>
+
+                <!-- Responsive Settings Options -->
+        <div class="pt-4 pb-1 border-t border-gray-200">
+            <div class="flex items-center px-4">
+                                <div class="flex-shrink-0 mr-3">
+                    <img class="object-cover w-10 h-10 rounded-full" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+                </div>
+                
+                <div>
+                    <div class="text-base font-medium text-gray-800">Ali</div>
+                    <div class="text-sm font-medium text-gray-500">ali@pp.com</div>
+                </div>
+            </div>
+
+            <div class="mt-3 space-y-1">
+                <!-- Account Management -->
+                <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/user/profile">
+    Profile
+</a>
+
+
+                <!-- Authentication -->
+                <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout">
+                    <input type="hidden" name="_token" value="5PwlDIsZWV8c1oeQ6GpKEC98yWDYGveZrHo2AgdV">
+                    <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout" onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+    Log Out
+</a>
+                </form>
+
+            </div>
+                </div>
+</div></nav>
+
+    
+    <div class="mb-8 font-sans antialiased text-gray-900">
+        <main class="grid grid-cols-4 gap-8 mt-8 wrapper">
+
+        <aside class="col-span-1 space-y-6 text-gray-600">
+
+    <div class="p-4 space-y-4 bg-white shadow">
+        <div>
+            
+            <a href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/create" class="inline-flex items-center px-8 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-blue-500 border border-transparent rounded hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}="">
+                Start a new discussion
+            </a>
+        </div>
+
+                            </div>
+
+    
+    
+
+
+</aside>
+
+        <section class="flex flex-col col-span-3 gap-y-4">
+            <small class="text-sm text-gray-400">discussion&gt;create</small>
+
+            <article class="p-5 bg-white shadow">
+                <div class="grid grid-cols-8">
+
+                    
+                    <div class="col-span-1">
+                        
+                    </div>
+
+                    
+                    <div class="col-span-7 space-y-6">
+                        <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads">
+    <input type="hidden" name="_token" value="5PwlDIsZWV8c1oeQ6GpKEC98yWDYGveZrHo2AgdV">    <input type="hidden" name="_method" value="POST">
+    <div class="space-y-8">
+                                
+                                <div>
+                                    <label class="block font-medium text-xs text-blue-500 font-semibold uppercase mb-2" for="title">
+    Title
+</label>
+                                    <input class="border-gray-300 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 rounded-md shadow-sm block w-full mt-1" id="title" type="text" name="title" autofocus="autofocus">
+                                                                    </div>
+
+                                
+                                <div>
+                                    <label class="block font-medium text-xs text-blue-500 font-semibold uppercase mb-2" for="category">
+    Category
+</label>
+                                    <select name="category" id="category" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                                        <option value="">Select Category</option>
+                                                                            <option value="1">General</option>
+                                        
+                                                                            <option value="2">Gaming</option>
+                                        
+                                                                            <option value="3">Tech</option>
+                                        
+                                                                            <option value="4">Coding Questions</option>
+                                        
+                                                                            <option value="5">Anime</option>
+                                        
+                                                                            <option value="6">Announcements</option>
+                                        
+                                                                            <option value="7">Photography</option>
+                                        
+                                                                        </select>
+                                                                    </div>
+
+                                
+                                <div>
+                                    <label class="block font-medium text-xs text-blue-500 font-semibold uppercase mb-2" for="tags">
+    Tags
+</label>
+                                    <div class="choices" data-type="select-multiple" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"><div class="choices__inner"><select name="tags[]" id="tags" x-data="{}" x-init="function () {choices($el)}" class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 choices__input" multiple="" hidden="" tabindex="-1" data-choice="active"></select><div class="choices__list choices__list--multiple"></div><input type="search" name="search_terms" class="choices__input choices__input--cloned" autocomplete="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" aria-label="Select Tags" placeholder="Select Tags" style="min-width: 12ch; width: 1ch;"></div><div class="choices__list choices__list--dropdown" aria-expanded="false"><div class="choices__list" aria-multiselectable="true" role="listbox"><div id="choices--tags-item-choice-1" class="choices__item choices__item--choice choices__item--selectable is-highlighted" role="option" data-choice="" data-id="1" data-value="7" data-select-text="Press to select" data-choice-selectable="" aria-selected="true">Abstract</div><div id="choices--tags-item-choice-2" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="2" data-value="8" data-select-text="Press to select" data-choice-selectable="">Candid</div><div id="choices--tags-item-choice-3" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="3" data-value="5" data-select-text="Press to select" data-choice-selectable="">DevOp</div><div id="choices--tags-item-choice-4" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="4" data-value="1" data-select-text="Press to select" data-choice-selectable="">Gossip</div><div id="choices--tags-item-choice-5" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="5" data-value="3" data-select-text="Press to select" data-choice-selectable="">Java</div><div id="choices--tags-item-choice-6" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="6" data-value="4" data-select-text="Press to select" data-choice-selectable="">MHA</div><div id="choices--tags-item-choice-7" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="7" data-value="6" data-select-text="Press to select" data-choice-selectable="">Nature</div><div id="choices--tags-item-choice-9" class="choices__item choices__item--choice choices__item--selectable" role="option" data-choice="" data-id="9" data-value="2" data-select-text="Press to select" data-choice-selectable="">Valorant</div></div></div></div>
+                                                                    </div>
+
+                                
+                                <div>
+                                    <label class="block font-medium text-xs text-blue-500 font-semibold uppercase mb-2" for="body">
+    Description
+</label>
+                                    <div>
+    <input name="body" id="body" value="" type="hidden">
+    <trix-toolbar id="trix-toolbar-1"><div class="trix-button-row">
+  <span class="trix-button-group trix-button-group--text-tools" data-trix-button-group="text-tools">
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-bold" data-trix-attribute="bold" data-trix-key="b" title="Bold" tabindex="-1">Bold</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-italic" data-trix-attribute="italic" data-trix-key="i" title="Italic" tabindex="-1">Italic</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-strike" data-trix-attribute="strike" title="Strikethrough" tabindex="-1">Strikethrough</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-link" data-trix-attribute="href" data-trix-action="link" data-trix-key="k" title="Link" tabindex="-1">Link</button>
+  </span>
+
+  <span class="trix-button-group trix-button-group--block-tools" data-trix-button-group="block-tools">
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-heading-1" data-trix-attribute="heading1" title="Heading" tabindex="-1">Heading</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-quote" data-trix-attribute="quote" title="Quote" tabindex="-1">Quote</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-code" data-trix-attribute="code" title="Code" tabindex="-1">Code</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-bullet-list" data-trix-attribute="bullet" title="Bullets" tabindex="-1">Bullets</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-number-list" data-trix-attribute="number" title="Numbers" tabindex="-1">Numbers</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-decrease-nesting-level" data-trix-action="decreaseNestingLevel" title="Decrease Level" tabindex="-1">Decrease Level</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-increase-nesting-level" data-trix-action="increaseNestingLevel" title="Increase Level" tabindex="-1">Increase Level</button>
+  </span>
+
+  <span class="trix-button-group trix-button-group--file-tools" data-trix-button-group="file-tools">
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-attach" data-trix-action="attachFiles" title="Attach Files" tabindex="-1">Attach Files</button>
+  </span>
+
+  <span class="trix-button-group-spacer"></span>
+
+  <span class="trix-button-group trix-button-group--history-tools" data-trix-button-group="history-tools">
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-undo" data-trix-action="undo" data-trix-key="z" title="Undo" tabindex="-1">Undo</button>
+    <button type="button" class="trix-button trix-button--icon trix-button--icon-redo" data-trix-action="redo" data-trix-key="shift+z" title="Redo" tabindex="-1">Redo</button>
+  </span>
+</div>
+
+<div class="trix-dialogs" data-trix-dialogs="">
+  <div class="trix-dialog trix-dialog--link" data-trix-dialog="href" data-trix-dialog-attribute="href">
+    <div class="trix-dialog__link-fields">
+      <input type="url" name="href" class="trix-input trix-input--dialog" placeholder="Enter a URL…" aria-label="URL" required="" data-trix-input="" disabled="disabled">
+      <div class="trix-button-group">
+        <input type="button" class="trix-button trix-button--dialog" value="Link" data-trix-method="setAttribute">
+        <input type="button" class="trix-button trix-button--dialog" value="Unlink" data-trix-method="removeAttribute">
+      </div>
+    </div>
+  </div>
+</div></trix-toolbar><trix-editor input="body" class="shadow-inner bg-gray-100" contenteditable="" role="textbox" trix-id="1" toolbar="trix-toolbar-1"></trix-editor>
+</div>
+                                                                    </div>
+
+                                
+                                <button type="submit" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+    Create
+</button>
+
+                    </div></form>
+                </div>
+            </div></article>
+        </section>
+    </main>
+    </div>
+
+    
+    <footer class="p-5 bg-blue-500">
+    <div class="text-white wrapper">
+        <span>
+            © ALI HAMZA 013
+        </span>
+    </div>
+</footer>
+
+    <!-- Livewire Scripts -->
+
+<script src="/livewire/livewire.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = '5PwlDIsZWV8c1oeQ6GpKEC98yWDYGveZrHo2AgdV';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://unpkg.com/trix@1.2.3/dist/trix.js"></script>
+
+
+</body></html>
