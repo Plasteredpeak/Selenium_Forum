@@ -26,7 +26,7 @@ public class MainPageTest {
     }
     @Test
     public void login() {
-        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login");
+        open("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/login");
 
         $(By.id("email")).setValue("ali@pp.com");
         $(By.id("password")).setValue("ali");
@@ -34,14 +34,14 @@ public class MainPageTest {
         $(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/button")).click();
 
         String Url = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
+        assertEquals("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
 
         webdriver().driver().clearCookies();
 
     }
     @Test
     public void loginFail() {
-        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login");
+        open("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/login");
 
         $(By.id("email")).setValue("ali@pp.com");
         $(By.id("password")).setValue("ali1");
@@ -52,7 +52,7 @@ public class MainPageTest {
         String Url = webdriver().driver().getCurrentFrameUrl();
 
         assertEquals("These credentials do not match our records.", errorMsg);
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login", Url);
+        assertEquals("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/login", Url);
 
         webdriver().driver().clearCookies();
     }
@@ -60,7 +60,7 @@ public class MainPageTest {
     @Test
     public void Post() {
 
-        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com");
+        open("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com");
         //click start a new discussion button
         $(By.xpath("/html/body/div[1]/main/section/aside/div/div/a")).click();
 
@@ -71,7 +71,7 @@ public class MainPageTest {
 
         //check login
         String login = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/create", login);
+        assertEquals("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/threads/create", login);
 
         $(By.id("title")).setValue("Selenium Test");
 
@@ -89,7 +89,7 @@ public class MainPageTest {
         //check if post is created
         String Url = webdriver().driver().getCurrentFrameUrl();
         String Uploaded = $(By.xpath("/html/body/div[1]/main/section/div/div[1]/span")).getText();
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads", Url);
+        assertEquals("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/threads", Url);
         assertEquals("Post Uploaded!", Uploaded);
 
         webdriver().driver().clearCookies();
@@ -100,7 +100,7 @@ public class MainPageTest {
     @Test
     public void likePost() throws InterruptedException {
         //login
-        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login");
+        open("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/login");
 
         $(By.id("email")).setValue("ali@pp.com");
         $(By.id("password")).setValue("ali");
@@ -108,7 +108,7 @@ public class MainPageTest {
         $(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/button")).click();
 
         String Url = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
+        assertEquals("http://ec2-13-231-225-47.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
 
         //go to threads page
         $(By.xpath("/html/body/div[2]/nav/div[1]/div/div[1]/div[2]/a")).click();
