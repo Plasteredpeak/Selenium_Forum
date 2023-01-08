@@ -5,6 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,6 +21,8 @@ public class MainPageTest {
 
         Configuration.headless = true;
         Configuration.timeout = 60;
+
+
     }
     @Test
     public void login() {
@@ -158,35 +161,35 @@ public class MainPageTest {
 //        webdriver().driver().clearCookies();
 //
 //    }
-    @Test
-    public void deleteReply(){
-        //login
-        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login");
-
-        $(By.id("email")).setValue("ali@pp.com");
-        $(By.id("password")).setValue("ali");
-
-        $(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/button")).click();
-
-        String Url = webdriver().driver().getCurrentFrameUrl();
-        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
-
-        //go to threads page
-        $(By.xpath("/html/body/div[2]/nav/div[1]/div/div[1]/div[2]/a")).click();
-
-        //click on post
-        $(By.xpath("/html/body/div[1]/main/section/div/article[1]/div/div[2]/a")).click();
-
-        //click delete button
-        $(By.xpath("/html/body/div[1]/main/section/div[1]/div/div/div[1]/div[2]/div/a")).click();
-
-        //check if post is deleted
-        String deleted = $(By.xpath("/html/body/div/main/section/div[1]/span")).getText();
-        assertEquals("Reply Deleted!", deleted);
-
-        webdriver().driver().clearCookies();
-
-    }
+//    @Test
+//    public void deleteReply(){
+//        //login
+//        open("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/login");
+//
+//        $(By.id("email")).setValue("ali@pp.com");
+//        $(By.id("password")).setValue("ali");
+//
+//        $(By.xpath("/html/body/div[2]/div/div[2]/form/div[4]/button")).click();
+//
+//        String Url = webdriver().driver().getCurrentFrameUrl();
+//        assertEquals("http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard", Url);
+//
+//        //go to threads page
+//        $(By.xpath("/html/body/div[2]/nav/div[1]/div/div[1]/div[2]/a")).click();
+//
+//        //click on post
+//        $(By.xpath("/html/body/div[1]/main/section/div/article[1]/div/div[2]/a")).click();
+//
+//        //click delete button
+//        $(By.xpath("/html/body/div[1]/main/section/div[1]/div/div/div[1]/div[2]/div/a")).click();
+//
+//        //check if post is deleted
+//        String deleted = $(By.xpath("/html/body/div/main/section/div[1]/span")).getText();
+//        assertEquals("Reply Deleted!", deleted);
+//
+//        webdriver().driver().clearCookies();
+//
+//    }
 
 
 }

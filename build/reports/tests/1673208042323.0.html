@@ -1,0 +1,617 @@
+<html lang="en"><head><style type="text/css" data-tag-name="trix-editor">trix-editor {
+  display: block;
+}
+
+trix-editor:empty:not(:focus)::before {
+  content: attr(placeholder);
+  color: graytext;
+  cursor: text;
+}
+
+trix-editor a[contenteditable=false] {
+  cursor: text;
+}
+
+trix-editor img {
+  max-width: 100%;
+  height: auto;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea {
+  resize: none;
+}
+
+trix-editor [data-trix-attachment] figcaption textarea.trix-autoresize-clone {
+  position: absolute;
+  left: -9999px;
+  max-height: 0px;
+}
+
+trix-editor [data-trix-attachment] figcaption[data-trix-placeholder]:empty::before {
+  content: attr(data-trix-placeholder);
+  color: graytext;
+}
+
+trix-editor [data-trix-cursor-target] {
+  display: inline-block !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+trix-editor [data-trix-cursor-target=left] {
+  vertical-align: top !important;
+  margin-left: -1px !important;
+}
+
+trix-editor [data-trix-cursor-target=right] {
+  vertical-align: bottom !important;
+  margin-right: -1px !important;
+}</style><style type="text/css" data-tag-name="trix-toolbar">trix-toolbar {
+  display: block;
+}
+
+trix-toolbar {
+  white-space: nowrap;
+}
+
+trix-toolbar [data-trix-dialog] {
+  display: none;
+}
+
+trix-toolbar [data-trix-dialog][data-trix-active] {
+  display: block;
+}
+
+trix-toolbar [data-trix-dialog] [data-trix-validate]:invalid {
+  background-color: #ffdddd;
+}</style>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="6GORrI9RScLy1vZtPwkn4VHP4IIput3wnnTcOfTt">
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Project">
+
+    <meta name="description" content="I Made the Best Forum">
+    <meta property="og:description" content="I Made the Best Forum">
+
+    <meta property="og:image" content="http://example.com/social.jpg">
+
+<meta property="og:url" content="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/general/selenium-test">
+<meta property="og:locale" content="en">
+
+
+<title>Laravel</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&amp;display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/css/choices.css">
+<link rel="stylesheet" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/css/app.css">
+
+<!-- Scripts -->
+<script src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/js/app.js" defer=""></script>
+
+
+<!-- Livewire Styles -->
+<style>
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+
+
+<link href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" rel="stylesheet">
+<link href="https://unpkg.com/easymde/dist/easymde.min.css" rel="stylesheet">
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" rel="stylesheet">
+<link href="https://unpkg.com/trix@1.2.3/dist/trix.css" rel="stylesheet"></head>
+
+<body class="bg-gray-100">
+
+    
+    <header class="relative flex items-center justify-center h-40 bg-blue-500">
+        <img class="absolute z-10 object-cover w-full h-40 opacity-10" src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/img/bg/bg-header.jpg" alt="">
+        <h2 class="z-50 text-4xl font-bold text-gray-200">Welcome to our community</h2>
+    </header>
+
+    
+    <nav x-data="{ open: false }" class="bg-white shadow">
+    <!-- Primary Navigation Menu -->
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 space-x-12">
+            <div class="flex">
+
+                <!-- Logo -->
+                <div class="flex items-center flex-shrink-0">
+                    <a href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com">
+                        <img src="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/img/logo/logo.png" class="block w-auto h-12" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            
+            <div class="flex items-center flex-grow">
+
+                <div class="p-2 text-white bg-blue-200 border rounded-l">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+</svg>                </div>
+                <input type="search" name="" id="" class="w-full border-none rounded-r shadow-inner bg-blue-50 focus:ring-blue-200" placeholder="Search Topics">
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+
+                <!-- Settings Dropdown -->
+                                <div class="relative ml-3">
+                    <div class="relative" x-data="{ open: false }" @click.away="open = false" @close.stop="open = false">
+    <div @click="open = ! open">
+        <button class="flex items-center text-sm transition border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300">
+                                <img class="object-cover w-8 h-8 rounded-full" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+                                <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+</svg>                            </button>
+    </div>
+
+    <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute z-50 mt-2 w-48 rounded-md shadow-lg origin-top-right right-0 " style="display: none;" @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 py-1 bg-white">
+            <!-- Account Management -->
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                Manage Account
+                            </div>
+
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/user/profile">Profile</a>
+                            
+                            <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard/notifications">Dashboard</a>
+
+                            
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Authentication -->
+                            <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout">
+                                <input type="hidden" name="_token" value="6GORrI9RScLy1vZtPwkn4VHP4IIput3wnnTcOfTt">
+                                <a class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout" onclick="event.preventDefault();
+                                                this.closest('form').submit();">Log Out</a>
+                            </form>
+        </div>
+    </div>
+</div>
+                </div>
+                            </div>
+
+            <!-- Hamburger -->
+            <div class="flex items-center -mr-2 sm:hidden">
+                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 text-gray-400 transition rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500">
+                    <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Navigation Menu -->
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/dashboard">
+    Dashboard
+</a>
+        </div>
+
+                <!-- Responsive Settings Options -->
+        <div class="pt-4 pb-1 border-t border-gray-200">
+            <div class="flex items-center px-4">
+                                <div class="flex-shrink-0 mr-3">
+                    <img class="object-cover w-10 h-10 rounded-full" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+                </div>
+                
+                <div>
+                    <div class="text-base font-medium text-gray-800">Ali</div>
+                    <div class="text-sm font-medium text-gray-500">ali@pp.com</div>
+                </div>
+            </div>
+
+            <div class="mt-3 space-y-1">
+                <!-- Account Management -->
+                <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/user/profile">
+    Profile
+</a>
+
+
+                <!-- Authentication -->
+                <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout">
+                    <input type="hidden" name="_token" value="6GORrI9RScLy1vZtPwkn4VHP4IIput3wnnTcOfTt">
+                    <a class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/logout" onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+    Log Out
+</a>
+                </form>
+
+            </div>
+                </div>
+</div></nav>
+
+    
+    <div class="mb-8 font-sans antialiased text-gray-900">
+        <main class="grid grid-cols-4 gap-8 mt-8 wrapper">
+
+        <aside class="col-span-1 space-y-6 text-gray-600">
+
+    <div class="p-4 space-y-4 bg-white shadow">
+        <div>
+            
+            <a href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/create" class="inline-flex items-center px-8 py-2 text-xs font-semibold tracking-widest text-white uppercase transition bg-blue-500 border border-transparent rounded hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25" }}="">
+                Start a new discussion
+            </a>
+        </div>
+
+                        <div class="pb-4 space-y-4">
+
+                        
+            <a class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/general/selenium-test/subscribe">
+    Subscribe to Thread
+</a>
+            <p class="text-sm text-gray-500 ">
+                Subscribe to this thread.
+            </p>
+            
+        </div>
+                    </div>
+
+    
+    
+
+
+</aside>
+
+        <section class="flex flex-col col-span-3 gap-y-4">
+
+            
+            <small class="text-sm text-gray-400">Threads&gt;General&gt;Selenium Test</small>
+
+            <article class="p-5 bg-white shadow">
+                <div class="relative grid grid-cols-8">
+
+                    
+                    <div class="col-span-1">
+                        <a href="" class="flex flex-col items-center text-sm text-center transition border-2 border-transparent rounded-full focus:outline-none">
+    <img class="object-cover w-16 h-16 rounded" user="{&quot;id&quot;:3,&quot;name&quot;:&quot;Ali&quot;,&quot;bio&quot;:null,&quot;email&quot;:&quot;ali@pp.com&quot;,&quot;type&quot;:1,&quot;email_verified_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;current_team_id&quot;:null,&quot;profile_photo_path&quot;:null,&quot;created_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;profile_photo_url&quot;:&quot;https:\/\/ui-avatars.com\/api\/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;}" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+    <span class="mt-2 text-xs text-gray-500">Ali</span>
+</a>
+                    </div>
+
+                    
+                    <div class="relative col-span-7 space-y-6">
+                        <div class="space-y-3">
+                            <h2 class="text-xl tracking-wide hover:text-blue-400">
+                                Selenium Test
+                            </h2>
+                            <div class="text-gray-500">
+                                <div>This a post using Selenium which is a test automation tool for web applications.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between">
+
+                            <div class="flex space-x-5 text-gray-500">
+                                
+                                <div wire:id="5ACWe69zaqz3Qzytzhll">
+        <button wire:click="toggleLike" class="flex items-center space-x-2 cursor-pointer">
+        <svg class="w-5 h-5 text-red-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>        <span class="text-xs font-bold">0</span>
+    </button>
+    </div>
+
+<!-- Livewire Component wire-end:5ACWe69zaqz3Qzytzhll -->
+                                
+                <div class="flex items-center space-x-2">
+                    <svg class="w-4 h-4 text-green-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+</svg>                    <span class="text-xs text-gray-500">1</span>
+                </div>
+
+                                
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-4 h-4 text-blue-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+</svg>                                    <span class="text-xs text-gray-500">1</span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="flex items-center text-xs text-gray-500">
+                                <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>                                Posted: 20 minutes ago
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                    <div class="absolute top-0 right-2">
+                        <div class="flex space-x-2">
+                                                        <a class="inline-flex items-center bg-yellow-300 rounded text-xs px-2 pt-1 border-b-2 border-transparent font-medium leading-5 text-gray-500 hover:bg-yellow-400 transition" href="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/threads/selenium-test/edit">
+    Edit
+</a>                            
+                                                        <div wire:id="4PWzTQqB7GBBw9UoGRfu" class="px-2 py-1 text-xs text-gray-500 transition duration-100 bg-red-300 rounded hover:bg-red-400">
+
+    <a wire:click="confirmThreadDeletion" wire:loading.attr="disabled" class="cursor-pointer">
+        Delete
+    </a>
+
+    <div x-data="{
+        show: window.Livewire.find('4PWzTQqB7GBBw9UoGRfu').entangle('confirmingThreadDeletion').defer,
+        focusables() {
+            // All focusable element types...
+            let selector = 'a, button, input:not([type=\'hidden\']), textarea, select, details, [tabindex]:not([tabindex=\'-1\'])'
+
+            return [...$el.querySelectorAll(selector)]
+                // All non-disabled elements...
+                .filter(el => ! el.hasAttribute('disabled'))
+        },
+        firstFocusable() { return this.focusables()[0] },
+        lastFocusable() { return this.focusables().slice(-1)[0] },
+        nextFocusable() { return this.focusables()[this.nextFocusableIndex()] || this.firstFocusable() },
+        prevFocusable() { return this.focusables()[this.prevFocusableIndex()] || this.lastFocusable() },
+        nextFocusableIndex() { return (this.focusables().indexOf(document.activeElement) + 1) % (this.focusables().length + 1) },
+        prevFocusableIndex() { return Math.max(0, this.focusables().indexOf(document.activeElement)) -1 },
+    }" x-init="$watch('show', value => {
+        if (value) {
+            document.body.classList.add('overflow-y-hidden');
+        } else {
+            document.body.classList.remove('overflow-y-hidden');
+        }
+    })" x-on:close.stop="show = false" x-on:keydown.escape.window="show = false" x-on:keydown.tab.prevent="$event.shiftKey || nextFocusable().focus()" x-on:keydown.shift.tab.prevent="prevFocusable().focus()" x-show="show" id="38197c062b15d6fafafe109e3e6c13bd" class="jetstream-modal fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50" style="display: none;">
+    <div x-show="show" class="fixed inset-0 transform transition-all" x-on:click="show = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="display: none;">
+        <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+    </div>
+
+    <div x-show="show" class="mb-6 bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:max-w-2xl sm:mx-auto" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" style="display: none;">
+        <div class="px-6 py-4">
+        <div class="text-lg">
+            Delete Thread
+        </div>
+
+        <div class="mt-4">
+            Are you sure you want to delete thread?!
+        </div>
+    </div>
+
+    <div class="px-6 py-4 bg-gray-100 text-right">
+        <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 active:text-gray-800 active:bg-gray-50 disabled:opacity-25 transition" wire:click="$toggle('confirmingThreadDeletion')" wire:loading.attr="disabled">
+    Cancel
+</button>
+
+            <button type="button" class="inline-flex items-center justify-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-500 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 active:bg-red-600 disabled:opacity-25 transition" wire:click="deleteThread" wire:loading.attr="disabled">
+    Delete Thread
+</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- Livewire Component wire-end:4PWzTQqB7GBBw9UoGRfu -->                                                    </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <div class="mt-6 space-y-5">
+                <h2 class="mb-0 text-sm font-bold uppercase">Replies</h2>
+                <hr>
+                                <div wire:id="loLJFtYqBPUGJjsuiHWd">
+
+    <div x-data="
+    {
+        editReply:false,
+        focus: function() {
+            const textInput = this.$refs.textInput;
+            textInput.focus();
+        }
+    }">
+
+        <div x-show="!editReply" class="relative">
+
+            <div class="p-5 space-y-4 text-gray-500 bg-white border-l-4 border-blue-300 shadow">
+                <div class="grid grid-cols-8">
+
+                    
+                    <div class="col-span-1">
+                        <a href="" class="flex flex-col items-center text-sm text-center transition border-2 border-transparent rounded-full focus:outline-none">
+    <img class="object-cover w-16 h-16 rounded" user="{&quot;id&quot;:3,&quot;name&quot;:&quot;Ali&quot;,&quot;bio&quot;:null,&quot;email&quot;:&quot;ali@pp.com&quot;,&quot;type&quot;:1,&quot;email_verified_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;current_team_id&quot;:null,&quot;profile_photo_path&quot;:null,&quot;created_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-10-30T21:39:34.000000Z&quot;,&quot;profile_photo_url&quot;:&quot;https:\/\/ui-avatars.com\/api\/?name=A&amp;color=7F9CF5&amp;background=EBF4FF&quot;}" src="https://ui-avatars.com/api/?name=A&amp;color=7F9CF5&amp;background=EBF4FF" alt="Ali">
+    <span class="mt-2 text-xs text-gray-500">Ali</span>
+</a>
+                    </div>
+
+                    <div class="relative col-span-6 space-y-4">
+                        <p>
+                            a reply gg
+                        </p>
+
+                        <div class="absolute flex justify-between w-full bottom-1">
+
+                            
+                            <div class="flex space-x-5 text-gray-500">
+                                <div wire:id="Nkltv5zGWlQaZSU0qYRy">
+        <button wire:click="toggleLike" class="flex items-center space-x-2 cursor-pointer">
+        <svg class="w-5 h-5 text-red-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>        <span class="text-xs font-bold">0</span>
+    </button>
+    </div>
+
+<!-- Livewire Component wire-end:Nkltv5zGWlQaZSU0qYRy -->                            </div>
+
+                            
+                            <div class="flex items-center text-xs text-gray-500">
+                                <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>                                Replied: 13 minutes ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute flex space-x-3 top-2 right-2">
+                                <a class="inline-flex items-center bg-yellow-300 rounded text-xs px-2 pt-1 border-b-2 border-transparent font-medium leading-5 text-gray-500 hover:bg-yellow-400 transition cursor-pointer" x-on:click="editReply = true; $nextTick(() => focus())">
+    Edit
+</a>                
+                                <div wire:id="dKME5VMuM7cX6csw590i">
+    <a class="inline-flex items-center bg-red-300 rounded text-xs px-2 pt-1 border-b-2 border-transparent font-medium leading-5 text-gray-500 hover:bg-red-400 transition cursor-pointer" wire:click="deleteReply">
+    Delete
+</a>
+</div>
+
+
+<!-- Livewire Component wire-end:dKME5VMuM7cX6csw590i -->                            </div>
+
+        </div>
+
+        <div x-show="editReply" style="display: none;">
+
+            <form wire:submit.prevent="updateReply">
+                <input class="w-full bg-gray-100 border-none shadow-inner focus:ring-blue-500" type="text" name="replyNewBody" wire:model.lazy="replyNewBody" x-ref="textInput" x-on:keydown.enter="editReply = false" x-on:keydown.escape="editReply = false">
+
+                <div class="mt-2 space-x-3 text-sm">
+                    <button type="button" class="text-green-400" x-on:click="editReply = false">
+                        Cancel
+                    </button>
+                    <button type="submit" class="text-red-400" x-on:click="editReply = false">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Livewire Component wire-end:loLJFtYqBPUGJjsuiHWd -->                            </div>
+
+                        <div class="p-5 space-y-4 bg-white shadow">
+                <h2 class="text-gray-500">Post a reply</h2>
+                <form method="POST" action="http://ec2-18-183-20-55.ap-northeast-1.compute.amazonaws.com/replies">
+    <input type="hidden" name="_token" value="6GORrI9RScLy1vZtPwkn4VHP4IIput3wnnTcOfTt">    <input type="hidden" name="_method" value="POST">
+    <div>
+                        <input type="text" name="body" class="w-full bg-gray-200 border-none shadow-inner focus:ring-blue-400">
+                        
+                        <input type="hidden" name="replyable_id" value="31">
+                                                <input type="hidden" name="replyable_type" value="threads">
+                        
+                    </div>
+
+                    <div class="grid mt-4">
+                        
+                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-blue-500 border border-transparent rounded font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-400 active:bg-blue-600 focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition justify-self-end">
+    Post
+</button>
+                    </div>
+</form>
+            </div>
+                    </section>
+    </main>
+    </div>
+
+    
+    <footer class="p-5 bg-blue-500">
+    <div class="text-white wrapper">
+        <span>
+            © ALI HAMZA 013
+        </span>
+    </div>
+</footer>
+
+    <!-- Livewire Scripts -->
+
+<script src="/livewire/livewire.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false"></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false">
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = '6GORrI9RScLy1vZtPwkn4VHP4IIput3wnnTcOfTt';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+<script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+<script src="https://unpkg.com/trix@1.2.3/dist/trix.js"></script>
+
+
+</body></html>
