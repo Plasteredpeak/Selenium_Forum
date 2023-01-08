@@ -117,12 +117,12 @@ public class MainPageTest {
         $(By.xpath("/html/body/div[1]/main/section/div/article[1]/div/div[2]/a")).click();
 
         //click like button
-        $(By.xpath("/html/body/div[1]/main/section/article/div/div[2]/div[2]/div[1]/div[1]/button")).click();
+        $(By.xpath("/html/body/div/main/section/article/div/div[2]/div[2]/div[1]/div[1]/button")).click();
 
         Thread.sleep(2000);
 
         //check if like is added
-        String like = $(By.xpath("/html/body/div[1]/main/section/article/div/div[2]/div[2]/div[1]/div[1]/button/span")).getText();
+        String like = $(By.xpath("/html/body/div/main/section/article/div/div[2]/div[2]/div[1]/div[1]/button/span")).getText();
         assertEquals("1", like);
 
         webdriver().driver().clearCookies();
